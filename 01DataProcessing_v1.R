@@ -32,7 +32,6 @@ imputationFunction <- function(imputeToData, imputeFromData, FUN, missingCols, s
   # FUN - imputation function
   # missingCols - missing value column names
   # suffix - suffix to add after column name
-  # trainingImpute - TRUE if imputing training data; F if imputing test data values in test data
   
   imputeToData <- imputeToData[, names(imputeToData) %in% missingCols]
   imputeFromData <- imputeFromData[, names(imputeFromData) %in% missingCols]
@@ -65,7 +64,6 @@ medianDatatst <- imputationFunction(imputeToData = test, imputeFromData = train,
 
 modeDatatst <- imputationFunction(imputeToData = test, imputeFromData = train, FUN = Mode
                                , missingCols = missingCols, suffix = '.trmode')
-
 
 weights <- read.csv('Training_Weight_V1.csv') %>% select(-X)
 
