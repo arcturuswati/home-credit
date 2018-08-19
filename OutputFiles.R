@@ -1,7 +1,7 @@
-wd.path <- "/Users/Swati/Documents/KaggleCompetitions/HomeCreditDefaultRisk/in/"
-setwd(wd.path)
+# Directory that has all submissions
 output.dir <- "/Users/Swati/Documents/KaggleCompetitions/HomeCreditDefaultRisk/out/"
 
+# vector with all .csv files (make sure you create a separate folder with all submission files
 filenames <- dir(output.dir, pattern=".csv", all.files=FALSE, full.names=FALSE)
 filePrefix <- 'file' # change this to whatever is the file name
 
